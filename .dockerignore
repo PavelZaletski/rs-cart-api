@@ -1,0 +1,8 @@
+.git
+.elasticbeanstalk
+node_modules
+dist
+test
+.prettierrc
+.eslintrc.js
+README.md
