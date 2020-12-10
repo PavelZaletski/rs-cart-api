@@ -34,7 +34,7 @@ export class CartService {
     return this.createByUserId(userId);
   }
 
-  updateByUserId(userId: string, { items }: Cart): Cart {
+  updateByUserId(userId: string, { items = [] }: Cart): Cart {
     const { id, ...rest } = this.findOrCreateByUserId(userId);
 
     const updatedCart = {
