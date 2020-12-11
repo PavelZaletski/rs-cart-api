@@ -31,14 +31,14 @@ export class CartController {
   // @UseGuards(BasicAuthGuard)
   @Put()
   updateUserCart(@Req() req: AppRequest, @Body() body) { // TODO: validate body payload...
-    // const cart = this.cartService.updateByUserId(getUserIdFromRequest(req), body)
+    const cart = this.cartService.updateByUserId(getUserIdFromRequest(req), body)
 
     return {
       statusCode: HttpStatus.OK,
       message: 'OK',
       data: {
-        // cart: body,
-        // total: calculateCartTotal(cart),
+        cart: body,
+        total: calculateCartTotal(cart),
       }
     }
   }
